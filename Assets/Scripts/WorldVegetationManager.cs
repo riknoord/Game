@@ -51,7 +51,7 @@ public class WorldVegetationManager : MonoBehaviour {
 
         foreach (TreeNode node in treeNodes)
         {
-            if(node.distance(finder) < closest.distance(finder) || closest == null)
+            if(closest == null || node.distance(finder) < closest.distance(finder))
             {
                 closest = node;
             }
